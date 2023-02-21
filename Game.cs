@@ -83,6 +83,7 @@ namespace CardPlayConsole
 
         public void ShowCardInPlay()
         {
+            cardInPlay = cardPile[0];
             Console.WriteLine($"Card in play: {cardInPlay}\n");
         }
 
@@ -119,9 +120,9 @@ namespace CardPlayConsole
             do
             {
                 while (!proceed)
-                {
+                {      
                     ShowPlayerHand();
-                    ShowCompyHand();
+                    ShowCompyHand();                    
                     ShowCardInPlay();
                     DisplayScores();
 
@@ -142,7 +143,7 @@ namespace CardPlayConsole
                 }
                 proceed = false;
 
-                //cardInPlay = cardPile[0];
+                cardInPlay = cardPile[0];
 
                 cardPlayed = playerHand[selection];
                 cardPile.Insert(0, playerHand[selection]);
@@ -196,7 +197,7 @@ namespace CardPlayConsole
                 int[] compyCardPlayed = compy.PossibleScores();
 
                 cardPile.Insert(0, compyHand[compyCardPlayed[0]]);
-                compyHand.RemoveAt(0);
+                compyHand.RemoveAt(compyCardPlayed[0]);
 
                 GetNewCard("Compy");
 
