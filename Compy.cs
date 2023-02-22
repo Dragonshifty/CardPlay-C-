@@ -52,7 +52,7 @@ namespace CardPlayConsole
                         scoreTemp[i] = 0;
                         break;
                     case 1:
-                        differenceScore = Card.GetDifference(compyHand[0], cardInPlay);
+                        differenceScore = Card.GetDifference(compyHand[i], cardInPlay);
                         checkSuit = Card.CheckSuitMatch(compyHand[i], cardInPlay);
                         if (checkSuit)
                         {
@@ -64,8 +64,8 @@ namespace CardPlayConsole
                         }
                         break;
                     case -1:
-                        differenceScore = Card.GetDifference(compyHand[0], cardInPlay);
-                        checkSuit = Card.CheckSuitMatch(compyHand[0], cardInPlay);
+                        differenceScore = Card.GetDifference(compyHand[i], cardInPlay);
+                        checkSuit = Card.CheckSuitMatch(compyHand[i], cardInPlay);
                         if (checkSuit)
                         {
                             scoreTemp[i] = 0;
