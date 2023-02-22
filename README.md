@@ -1,2 +1,2 @@
-# CardPlay-C#
-C# version
+# CardPlay C# Console
+
