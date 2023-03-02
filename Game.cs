@@ -41,7 +41,7 @@ namespace CardPlayConsole
             }
         }
 
-        public void GetNewCard(String whoIsPlaying)
+        public void GetNewCard(string whoIsPlaying)
         {
             if (whoIsPlaying == "Player" && deck.Count() > 0)
             {
@@ -131,10 +131,6 @@ namespace CardPlayConsole
                         Console.WriteLine("Which card do you wish to play?\n");
                         selection = Convert.ToInt32(Console.ReadLine()) - 1;
                         proceed = (selection > 0 && selection <= playerHand.Count()) ? true : false;
-                        //if (selection > 0 && selection <= 5)
-                        //    proceed = true;
-                        //else
-                        //    Console.WriteLine("Must be between 1 and 5");
                     } catch
                     {
                         Console.WriteLine("Must be a number between 1 and 5");

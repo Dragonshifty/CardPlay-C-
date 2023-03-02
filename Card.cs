@@ -11,7 +11,6 @@ namespace CardPlayConsole
     public class Card : IComparable<Card>
     {
         private Card() { }
-        int ord;
         public enum CardNumber
         {
             TWO = 2, THREE = 3, FOUR = 4, FIVE = 5, SIX = 6, SEVEN = 7,
@@ -52,9 +51,9 @@ namespace CardPlayConsole
             return cardList;
         }
 
-        private static Random rand = new Random();
         public static void Shuffle<T>(IList<T> values)
         {
+            Random rand = new Random();
             for (int i = values.Count - 1; i > 0; i--)
             {
                 int k = rand.Next(i + 1);
